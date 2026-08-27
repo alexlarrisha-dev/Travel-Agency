@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Guide - Explore Myanmar</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="navbar">
+      <h1 class="logo">Travel<span>Guide</span></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#packages">Tour Packages</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Explore Beautiful Destinations</h2>
+      <p>Discover amazing places, cultures, and adventures around the globe.</p>
+      <a href="#packages" class="btn">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Tour Packages Section -->
+  <section id="packages" class="destinations">
+    <h2>ကျွန်ုပ်တို့၏ အထင်ကရ ခရီးစဉ်များ</h2>
+    <p class="section-subtitle">ပြည်တွင်းပြည်ပ ခရီးသွားများအတွက် အကောင်းဆုံး Hybrid Tour Packages</p>
+    
+    <!-- Filter Buttons -->
+    <div class="filter-container">
+      <button class="filter-btn active" onclick="filterSelection('all', this)">အားလုံး</button>
+      <button class="filter-btn" onclick="filterSelection('cultural', this)">ယဉ်ကျေးမှု (Cultural)</button>
+      <button class="filter-btn" onclick="filterSelection('adventure', this)">စွန့်စားခန်း (Adventure)</button>
+      <button class="filter-btn" onclick="filterSelection('beach', this)">ကမ်းခြေ (Beach)</button>
+      <button class="filter-btn" onclick="filterSelection('pilgrim', this)">ဘုရားဖူး (Pilgrimage)</button>
+    </div>
+
+    <!-- Tour Package Cards Grid -->
+    <div class="card-container">
+      
+      <!-- ==================== မူလ ခရီးစဉ် (၃) ခု (default-card) ==================== -->
+      
+      <!-- 1. Bagan (မူလ) -->
+      <div class="card filter-item default-card cultural">
+        <img src="https://images.unsplash.com/photo-1540611025311-01df3cef54b5?auto=format&fit=crop&w=800&q=80" alt="Bagan">
+        <div class="card-info">
+          <span class="tag">၃ ရက် | ၃ ည</span>
+          <h3>Bagan Archaeological Wonder</h3>
+          <p>ပုဂံရှေးဟောင်းယဉ်ကျေးမှုနယ်မြေ ဘုရားပေါင်းစုံနှင့် နေဝင်ဆည်းဆာ အလှကြည့်ရှုခြင်း။</p>
+          <div class="card-footer">
+            <span class="price">MMK 350,000 / USD $170</span>
+            <a href="#" class="card-btn">ဘိုကင်တင်ရန်</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Kalaw (မူလ) -->
+      <div class="card filter-item default-card adventure">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Kalaw">
+        <div class="card-info">
+          <span class="tag">၃ ရက်</span>
+          <h3>Kalaw to Inle Trekking</h3>
+          <p>ကလောမှ အင်းလေးသို့ တောင်တက်ခရီးစဉ်နှင့် ဒေသခံလူမျိုးစုများ၏ လှပသော ရိုးရာယဉ်ကျေးမှု။</p>
+          <div class="card-footer">
+            <span class="price">MMK 280,000 / USD $140</span>
+            <a href="#" class="card-btn">ဘိုကင်တင်ရန်</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Ngapali (မူလ) -->
+      <div class="card filter-item default-card beach">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Ngapali">
+        <div class="card-info">
+          <span class="tag">၄ ရက် | ၃ ည</span>
+          <h3>Ngapali Beach Relaxation</h3>
+          <p>သဲသောင်ပြင် အလှတိုင်အောင် ကြည်လင်သော ငပလီကမ်းခြေ အပန်းဖြေခရီးစဉ်။</p>
+          <div class="card-footer">
+            <span class="price">MMK 450,000 / USD $220</span>
+            <a href="#" class="card-btn">ဘိုကင်တင်ရန်</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== ဘုရားဖူးနှိပ်မှ ပေါ်လာမည့် ခရီးစဉ် (၇) ခု (pilgrim-card) ==================== -->
+
+      <!-- 1. ပုဂံ / ပုပ္ပါး -->
+      <div class="card filter-item pilgrim-card" style="display: none;">
+        <img src="https://images.unsplash.com/photo-1540611025311-01df3cef54b5?auto=format&fit=crop&w=800&q=80" alt="Bagan Popa">
+        <div class="card-info">
+          <span class="tag">၂ ညအိပ် ၃ ရက်</span>
+          <h3>ပုဂံ / ပုပ္ပါး ခရီးစဉ်</h3>
+          <p>ပုဂံက ဘုရားများ (ရွှေစည်းခုံ၊ အာနန္ဒာ etc) နှင့် ပုပ္ပါးတောင် လေ့လာရေး ခရီးစဉ်။</p>
+          <div class="card-footer">
+            <span class="price">MMK 350,000</span>
+            <a href="#" class="card-btn">ဘိုကင်တင်ရန်</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. တောင်ကြီး၊ အင်းလေး၊ ပင်းတယ၊ ကလော -->
+      <div class="card filter-item pilgrim-card" style="display: none;">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Shan State">
+        <div class="card-info">
+          <span class="tag">၃ ရက် ခရီးစဉ်</span>
+          <h3>တောင်ကြီး၊ အင်းလေး၊ ပင်းတယ၊ ကလော</h3>
+          <p>စူဠာမဏိစေတီ၊ ဖောင်တော်ဦးဘုရား၊ ရိုးရာရက်ကန်းစဉ်၊ ရေပေါ်ဈေးနှင့် ပင်းတယလိုဏ်ဂူ ခရီးစဉ်။</p>
+          <div class="card-footer">
+            <span class="price">MMK 280,000</span>
+            <a href="#" class="card-btn">ဘိုကင်တင်ရန်</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. ပြည်၊ အကောက်တောင်၊ ပဲခူး၊ ရွှေတောင် -->
+      <div class="card filter-item pilgrim-card" style="display: none;">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Pyay Bago">
+        <div class="card-info">
+          <span class="tag">၂ ရက် ခရီးစဉ်</span>
+          <h3>ပြည်၊ အကောက်တောင်၊ ပဲခူး၊ ရွှေတောင်</h3>
+          <p>ရွှေဆံတော်၊ ရွှေမျက်မှန်ဘုရား၊ အကောက်တောင်ဘုရား၊ ရွှေမော်ဓောနှင့် ရွှေသာလျောင်း ခရီးစဉ်။</p>
+          <div class="card-footer">
+            <span class="price">MMK 220,000</span>
+            <a href="#" class="card-btn">ဘိုကင်တင်ရန်</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. ရန်ကုန်၊ သံလျင်၊ မှော်ဘီ -->
+      <div class="card filter-item pilgrim-card" style="display: none;">
+        <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=800&q=80" alt="Yangon Tour">
+        <div class="card-info">
+          <span class="tag">၁ ရက် ခရီးစဉ်</span>
+          <h3>ရန်ကုန်၊ သံလျင်၊ မှော်ဘီ</h3>
+          <p>ရွှေတိဂုံ၊ ငါးထပ်ကြီး၊ ခြောက်ထပ်ကြီး၊ ဆူးလေ၊ ဗိုလ်တထောင်၊ ရေလယ်ဘုရားနှင့် သဘာဝမှော်ဘီတရားစခန်း။</p>
+          <div class="card-footer">
+            <span class="price">MMK 120,000</span>
+            <a href="#" class="card-btn">ဘိုကင်တင်ရန်</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. မကွေး၊ မင်းဘူး -->
+      <div class="card filter-item pilgrim-card" style="display: none;">
+        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80" alt="Magway Minbu">
+        <div class="card-info">
+          <span class="tag">၂ ရက် ခရီးစဉ်</span>
+          <h3>မကွေး၊ မင်းဘူး ခရီးစဉ်</h3>
+          <p>မကွေး မြသလွန်စေတီ နှင့် မင်းဘူး နဂါးပွက်တောင်၊ မန်းရွှေစက်တော် ဘုရားဖူး ခရီးစဉ်။</p>
+          <div class="card-footer">
+            <span class="price">MMK 250,000</span>
+            <a href="#" class="card-btn">ဘိုကင်တင်ရန်</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. ကျိုက်ထီးရိုး -->
+      <div class="card filter-item pilgrim-card" style="display: none;">
+        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=800&q=80" alt="Kyaiktiyo">
+        <div class="card-info">
+          <span class="tag">၂ ရက် ၁ ည</span>
+          <h3>ကျိုက်ထီးရိုး ခရီးစဉ်</h3>
+          <p>ကျိုက်ထီးရိုးရင်ပြင်တော် ရွှေဆုံဆည်းဆာနှင့် မွန်ပြည်နယ် အနီးတစ်ဝိုက် ဘုရားများ ဖူးမြော်ခြင်း။</p>
+          <div class="card-footer">
+            <span class="price">MMK 180,000</span>
+            <a href="#" class="card-btn">ဘိုကင်တင်ရန်</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. မန္တလေး၊ စစ်ကိုင်း၊ အင်းဝ၊ ပြင်ဦးလွင် -->
+      <div class="card filter-item pilgrim-card" style="display: none;">
+        <img src="https://images.unsplash.com/photo-1508672019048-805479767513?auto=format&fit=crop&w=800&q=80" alt="Mandalay">
+        <div class="card-info">
+          <span class="tag">၃ ရက် ခရီးစဉ်</span>
+          <h3>မန္တလေး၊ စစ်ကိုင်း၊ အင်းဝ၊ ပြင်ဦးလွင်</h3>
+          <p>မန္တလေး အထင်ကရနေရာများ၊ စစ်ကိုင်းတောင်ရိုး၊ အမရပူရ ဦးပိန်တံတား နှင့် ပြင်ဦးလွင် ခရီးစဉ်။</p>
+          <div class="card-footer">
+            <span class="price">MMK 320,000</span>
+            <a href="#" class="card-btn">ဘိုကင်တင်ရန်</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <h2>About Us</h2>
+      <p>ကျွန်ုပ်တို့ TravelGuide သည် ခရီးသွားပြည်သူများအတွက် စိတ်ချမ်းသာပြီး လုံခြုံစိတ်ချရသော ခရီးစဉ်များကို စေတနာအပြည့်ဖြင့် ဝန်ဆောင်မှုပေးနေသော ခရီးသွားအေဂျင်စီဖြစ်ပါသည်။ ပြည်တွင်း/ပြည်ပ ခရီးစဉ်များကို ဈေးနှုန်းချိုသာစွာဖြင့် အမှတ်တရကောင်းများ ဖန်တီးပေးလျက်ရှိပါသည်။</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>ဆက်သွယ်ရန် လိပ်စာ</h3>
+        <p><strong>Email:</strong> info@travelguide.com</p>
+        <p><strong>Phone:</strong> +95 9 123 456 789</p>
+        <p><strong>Address:</strong> Yangon, Myanmar</p>
+      </div>
+
+      <form class="contact-form">
+        <input type="text" placeholder="သင့်အမည်" required>
+        <input type="email" placeholder="အီးမေးလ်" required>
+        <textarea rows="4" placeholder="မေးမြန်းလိုသည့် အကြောင်းအရာ" required></textarea>
+        <button type="submit" class="btn">ပေးပို့ရန်</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 TravelGuide. All rights reserved.</p>
+  </footer>
+
+  <!-- Filter Script -->
+  <script>
+    function filterSelection(category, element) {
+      let allCards = document.getElementsByClassName("filter-item");
+      let defaultCards = document.getElementsByClassName("default-card");
+      let pilgrimCards = document.getElementsByClassName("pilgrim-card");
+      let buttons = document.getElementsByClassName("filter-btn");
+
+      // Active Button Highlight
+      for (let btn of buttons) {
+        btn.classList.remove("active");
+      }
+      if(element) {
+        element.classList.add("active");
+      }
+
+      // Hide all first
+      for (let card of allCards) {
+        card.style.display = "none";
+      }
+
+      // Show specific ones
+      if (category === "all") {
+        for (let card of defaultCards) {
+          card.style.display = "flex";
+        }
+      } else if (category === "pilgrim") {
+        for (let card of pilgrimCards) {
+          card.style.display = "flex";
+        }
+      } else {
+        for (let card of defaultCards) {
+          if (card.classList.contains(category)) {
+            card.style.display = "flex";
+          }
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
