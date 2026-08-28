@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Myanmar Tourism</title>
+
+    <style>
+        /* Basic page style */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Header */
+        header {
+            background-color: #00695c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #004d40;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 17px;
+        }
+
+        /* Main title */
+        .tour-title {
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .tour-title h2 {
+            font-size: 32px;
+            color: #00695c;
+        }
+
+        .tour-title p {
+            color: #555;
+        }
+
+        /* Tour packages */
+        .tour-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            padding: 20px 50px;
+        }
+
+        .tour {
+            background-color: white;
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .tour img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .tour-content {
+            padding: 20px;
+        }
+
+        .tour-content h3 {
+            color: #00695c;
+            margin-top: 0;
+        }
+
+        .tour-content p {
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #e65100;
+        }
+
+        /* Book button */
+        .book-button {
+            display: inline-block;
+            background-color: #00695c;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .book-button:hover {
+            background-color: #004d40;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Myanmar Tourism</h1>
+        <p>Explore Myanmar, Discover Amazing Experiences</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#tours">Tour Packages</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Tour Packages Section -->
+    <section id="tours">
+
+        <div class="tour-title">
+            <h2>Our Tour Packages</h2>
+            <p>Choose your perfect journey and explore the beauty of Myanmar.</p>
+        </div>
+
+        <div class="tour-container">
+
+            <!-- Beach Tour -->
+            <div class="tour">
+
+                <img src="ngapali.jpg" alt="Ngapali Beach">
+
+                <div class="tour-content">
+
+                    <h3>🏖️ Beach Tour</h3>
+
+                    <p><strong>Place:</strong> Ngapali Beach</p>
+
+                    <p><strong>Duration:</strong> 3 Days / 2 Nights</p>
+
+                    <p class="price">250,000 MMK</p>
+
+                    <p>
+                        Relax on the beautiful beaches of Ngapali,
+                        enjoy the sunset, and experience the peaceful
+                        coastal atmosphere.
+                    </p>
+
+                    <a href="booking.html" class="book-button">Book Now</a>
+
+                </div>
+            </div>
+
+
+            <!-- Adventure Tour -->
+            <div class="tour">
+
+                <img src="hpa-an.jpg" alt="Hpa-An Adventure">
+
+                <div class="tour-content">
+
+                    <h3>🏔️ Adventure Tour</h3>
+
+                    <p><strong>Place:</strong> Hpa-An</p>
+
+                    <p><strong>Duration:</strong> 3 Days / 2 Nights</p>
+
+                    <p class="price">200,000 MMK</p>
+
+                    <p>
+                        Explore caves, mountains, waterfalls, and
+                        beautiful natural landscapes while enjoying
+                        an exciting adventure.
+                    </p>
+
+                    <a href="booking.html" class="book-button">Book Now</a>
+
+                </div>
+            </div>
+
+
+            <!-- Pilgrimage Tour -->
+            <div class="tour">
+
+                <img src="bagan.jpg" alt="Bagan Pagodas">
+
+                <div class="tour-content">
+
+                    <h3>🛕 Pilgrimage Tour</h3>
+
+                    <p><strong>Place:</strong> Bagan</p>
+
+                    <p><strong>Duration:</strong> 3 Days / 2 Nights</p>
+
+                    <p class="price">300,000 MMK</p>
+
+                    <p>
+                        Visit the ancient temples and pagodas of
+                        Bagan and experience its peaceful and
+                        spiritual atmosphere.
+                    </p>
+
+                    <a href="booking.html" class="book-button">Book Now</a>
+
+                </div>
+            </div>
+
+
+            <!-- Cultural Tour -->
+            <div class="tour">
+
+                <img src="ygn.jpg" alt="Yangon Cultural Tour">
+
+                <div class="tour-content">
+
+                    <h3>🏛️ Cultural Tour</h3>
+
+                    <p><strong>Place:</strong> Yangon</p>
+
+                    <p><strong>Duration:</strong> 2 Days / 1 Night</p>
+
+                    <p class="price">150,000 MMK</p>
+
+                    <p>
+                        Discover Myanmar's history, traditional
+                        culture, famous landmarks, and local
+                        lifestyle in Yangon.
+                    </p>
+
+                    <a href="booking.html" class="book-button">Book Now</a>
+
+                </div>
+            </div>
+            <!-- Mandalay Tour -->
+<div class="tour">
+
+    <img src="mdy2.jpg" alt="Mandalay">
+
+    <div class="tour-content">
+
+        <h3>🏯 Cultural Tour</h3>
+
+        <p><strong>Place:</strong> Mandalay</p>
+
+        <p><strong>Duration:</strong> 3 Days / 2 Nights</p>
+
+        <p class="price">250,000 MMK</p>
+
+        <p>
+            Explore Mandalay Palace, Mandalay Hill, U Bein Bridge,
+            and experience the rich history and traditions of Myanmar.
+        </p>
+
+        <a href="booking.html" class="book-button">Book Now</a>
+
+    </div>
+</div>
+
+
+<!-- Inle Lake Tour -->
+<div class="tour">
+
+    <img src="inle.jpg" alt="Inle Lake">
+
+    <div class="tour-content">
+
+        <h3>🌊 Adventure Tour</h3>
+
+        <p><strong>Place:</strong> Inle Lake</p>
+
+        <p><strong>Duration:</strong> 3 Days / 2 Nights</p>
+
+        <p class="price">280,000 MMK</p>
+
+        <p>
+            Enjoy a boat trip across Inle Lake, discover floating
+            villages, traditional fishing, and the unique lifestyle
+            of the local people.
+        </p>
+
+        <a href="booking.html" class="book-button">Book Now</a>
+
+    </div>
+</div>
+
+
+<!-- Bago Tour -->
+<div class="tour">
+
+    <img src="bago.jpg" alt="Bago">
+
+    <div class="tour-content">
+
+        <h3>🛕 Pilgrimage Tour</h3>
+
+        <p><strong>Place:</strong> Bago</p>
+
+        <p><strong>Duration:</strong> 2 Days / 1 Night</p>
+
+        <p class="price">120,000 MMK</p>
+
+        <p>
+            Visit famous pagodas and historical sites in Bago
+            while discovering the city's rich cultural heritage.
+        </p>
+
+    <a href="booking.html" class="book-button">Book Now</a>
+    </div>
+</div>
+
+
+<!-- Kyaiktiyo Tour -->
+<div class="tour">
+
+    <img src="kyk.jpg" alt="Kyaiktiyo Pagoda">
+
+    <div class="tour-content">
+
+        <h3>🙏 Pilgrimage Tour</h3>
+
+        <p><strong>Place:</strong> Kyaiktiyo Pagoda</p>
+
+        <p><strong>Duration:</strong> 2 Days / 1 Night</p>
+
+        <p class="price">150,000 MMK</p>
+
+        <p>
+            Visit the famous Golden Rock at Kyaiktiyo and enjoy
+            the beautiful mountain scenery and peaceful atmosphere.
+        </p>
+
+        <a href="booking.html" class="book-button">Book Now</a>
+
+    </div>
+</div>
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Myanmar Tourism. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
