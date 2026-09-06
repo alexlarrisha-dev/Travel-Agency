@@ -1,0 +1,312 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8faf9;
+    color: #555;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    background-color: #087568;
+    color: white;
+    text-align: center;
+    padding: 70px 20px 60px;
+}
+
+.header h1 {
+    font-size: 52px;
+    margin-bottom: 35px;
+}
+
+.header p {
+    font-size: 25px;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+.navbar {
+    background-color: #00594f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 55px;
+
+    padding: 22px 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 23px;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #b9f2e6;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 480px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0, 89, 79, 0.65),
+            rgba(0, 89, 79, 0.65)
+        ),
+        url("images/BaganBackgroundImage.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 23px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+
+/* ================= EXPLORE BUTTON ================= */
+
+.explore-btn {
+    display: inline-block;
+
+    background-color: #b9eee5;
+    color: #00594f;
+
+    text-decoration: none;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    padding: 15px 35px;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================= DESTINATIONS ================= */
+
+.destinations {
+    padding: 70px 30px;
+
+    text-align: center;
+}
+
+.destinations > h2 {
+    color: #087568;
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+.section-description {
+    font-size: 20px;
+
+    margin-bottom: 45px;
+}
+
+
+/* ================= DESTINATION CONTAINER ================= */
+
+.destination-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ================= DESTINATION CARD ================= */
+
+.destination-card {
+    background-color: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+
+.destination-card img {
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+}
+
+
+.card-content {
+    padding: 22px;
+
+    text-align: left;
+}
+
+.card-content h3 {
+    color: #087568;
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background-color: #00594f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 20px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .destination-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .header h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 55px 15px 45px;
+    }
+
+    .header h1 {
+        font-size: 36px;
+    }
+
+    .header p {
+        font-size: 18px;
+    }
+
+
+    .navbar {
+        flex-wrap: wrap;
+
+        gap: 18px 35px;
+
+        padding: 20px;
+    }
+
+    .navbar a {
+        font-size: 20px;
+    }
+
+
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+    .destinations {
+        padding: 50px 20px;
+    }
+
+    .destinations > h2 {
+        font-size: 35px;
+    }
+
+
+    .destination-container {
+        grid-template-columns: 1fr;
+    }
+
+}
