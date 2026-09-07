@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Your Tour</title>
+
+    <style>
+
+        /* Page */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+
+        /* Header */
+        header {
+            background-color: #00695c;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+
+        /* Booking Box */
+        .booking-container {
+            width: 600px;
+            max-width: 90%;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* Booking title */
+        .booking-container h2 {
+            text-align: center;
+            color: #00695c;
+            margin-bottom: 30px;
+        }
+
+
+        /* Form */
+        #bookingForm {
+            display: grid;
+
+            grid-template-columns: 160px 1fr;
+
+            gap: 15px;
+
+            align-items: center;
+        }
+
+
+        /* Labels */
+        #bookingForm label {
+            font-weight: bold;
+        }
+
+
+        /* Input boxes */
+        #bookingForm input,
+        #bookingForm select {
+
+            width: 100%;
+
+            padding: 10px;
+
+            box-sizing: border-box;
+
+            border: 1px solid #ccc;
+
+            border-radius: 5px;
+
+            font-size: 15px;
+        }
+
+
+        /* Confirm button */
+        .submit-button {
+
+            grid-column: 2;
+
+            padding: 12px;
+
+            background-color: #00695c;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+        }
+
+
+        .submit-button:hover {
+            background-color: #004d40;
+        }
+
+
+        /* Confirmation message */
+        #confirmation {
+
+            margin-top: 30px;
+
+            padding: 20px;
+
+            background-color: #e0f2f1;
+
+            border-radius: 10px;
+
+            color: #00695c;
+
+            text-align: left;
+        }
+
+
+        #confirmation h2 {
+            text-align: center;
+        }
+
+
+        /* Back button */
+        .back-button {
+
+            display: block;
+
+            text-align: center;
+
+            margin-top: 20px;
+
+            color: #00695c;
+
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>Book Your Tour</h1>
+
+        <p>Start your journey with us!</p>
+
+    </header>
+
+
+
+    <!-- Booking Form -->
+
+    <div class="booking-container">
+
+        <h2>Tour Booking Form</h2>
+
+
+        <form id="bookingForm">
+
+
+            <!-- Full Name -->
+
+            <label for="name">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your full name"
+                required
+            >
+
+
+
+            <!-- Email -->
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+
+
+            <!-- Phone -->
+
+            <label for="phone">
+                Phone Number
+            </label>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Enter your phone number"
+                required
+            >
+
+
+
+            <!-- Destination -->
+
+            <label for="destination">
+                Choose Destination
+            </label>
+
+            <select id="destination">
+
+                <option>Ngapali Beach</option>
+
+                <option>Hpa-An</option>
+
+                <option>Bagan</option>
+
+                <option>Yangon</option>
+
+                <option>Mandalay</option>
+
+                <option>Inle Lake</option>
+
+                <option>Bago</option>
+
+                <option>Kyaiktiyo Pagoda</option>
+
+            </select>
+
+
+
+            <!-- Number of people -->
+
+            <label for="people">
+                Number of People
+            </label>
+
+            <input
+                type="number"
+                id="people"
+                min="1"
+                max="20"
+                value="1"
+                required
+            >
+
+
+
+            <!-- Travel date -->
+
+            <label for="date">
+                Travel Date
+            </label>
+
+            <input
+                type="date"
+                id="date"
+                required
+            >
+
+
+
+            <!-- Confirm button -->
+
+            <button
+                type="submit"
+                class="submit-button"
+            >
+                Confirm Booking
+            </button>
+
+
+        </form>
+
+
+
+        <!-- Confirmation will appear here -->
+
+        <div id="confirmation"></div>
+
+
+
+        <!-- Back to main page -->
+
+        <a href="index.html" class="back-button">
+            ← Back to Tour Packages
+        </a>
+
+
+    </div>
+
+
+
+    <!-- JavaScript -->
+
+    <script>
+
+        document
+            .getElementById("bookingForm")
+            .addEventListener("submit", function(event) {
+
+
+                /* Stop the page from refreshing */
+
+                event.preventDefault();
+
+
+                /* Get information from the form */
+
+                let name =
+                    document.getElementById("name").value;
+
+                let destination =
+                    document.getElementById("destination").value;
+
+                let people =
+                    document.getElementById("people").value;
+
+                let date =
+                    document.getElementById("date").value;
+
+
+                /* Display confirmation */
+
+                document.getElementById("confirmation").innerHTML =
+
+                    "<h2>🎉 Booking Confirmed!</h2>" +
+
+                    "<p><strong>Thank you:</strong> "
+                    + name + "</p>" +
+
+                    "<p><strong>Destination:</strong> "
+                    + destination + "</p>" +
+
+                    "<p><strong>Number of People:</strong> "
+                    + people + "</p>" +
+
+                    "<p><strong>Travel Date:</strong> "
+                    + date + "</p>" +
+
+                    "<p><strong>Status:</strong> Booking Successful ✓</p>";
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>

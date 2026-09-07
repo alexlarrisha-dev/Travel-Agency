@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cultural Tours</title>
+
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+
+        /* Header */
+
+        header {
+            background-color: #00695c;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+
+        header h1 {
+            margin: 0;
+        }
+
+
+        header p {
+            margin-top: 10px;
+        }
+
+
+        /* Navigation Bar */
+
+        nav {
+            background-color: #004d40;
+            padding: 15px;
+            text-align: center;
+        }
+
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* Page Heading */
+
+        h2 {
+            text-align: center;
+            color: #00695c;
+            margin-top: 40px;
+        }
+
+
+        /* Tour Packages */
+
+        .tour-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+
+
+        /* Individual Tour */
+
+        .tour {
+            background-color: white;
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* Tour Image */
+
+        .tour img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+
+        /* Tour Information */
+
+        .tour-content {
+            padding: 20px;
+        }
+
+
+        .tour-content h3 {
+            color: #00695c;
+            margin-top: 0;
+        }
+
+
+        .tour-content p {
+            line-height: 1.5;
+            color: #555;
+        }
+
+
+        /* Price */
+
+        .price {
+            color: #e65100 !important;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+
+        /* Book Button */
+
+        .book-button {
+            display: inline-block;
+            background-color: #00695c;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+
+        .book-button:hover {
+            background-color: #004d40;
+        }
+
+
+        /* Footer */
+
+        footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <h1>Cultural Tours</h1>
+
+        <p>
+            Experience the history, traditions and culture of Myanmar
+        </p>
+
+    </header>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="cultural.html">Cultural</a>
+
+        <a href="adventure.html">Adventure</a>
+
+        <a href="pilgrimage.html">Pilgrimage</a>
+
+        <a href="beach.html">Beach</a>
+
+    </nav>
+
+
+    <h2>Our Cultural Packages</h2>
+
+
+    <div class="tour-container">
+
+
+        <!-- Yangon -->
+
+        <div class="tour">
+
+            <img src="images/ygn.jpg" alt="Yangon">
+
+            <div class="tour-content">
+
+                <h3>Yangon Cultural Tour</h3>
+
+                <p>
+                    Explore historic buildings, local markets,
+                    traditional culture and famous landmarks.
+                </p>
+
+                <p>
+                    <strong>Duration:</strong>
+                    2 Days / 1 Night
+                </p>
+
+                <p class="price">
+                    150,000 MMK
+                </p>
+
+                <a href="booking.html" class="book-button">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Mandalay -->
+
+        <div class="tour">
+
+            <img src="images/mdy.jpg" alt="Mandalay">
+
+            <div class="tour-content">
+
+                <h3>Mandalay Heritage Tour</h3>
+
+                <p>
+                    Discover Mandalay Palace, U Bein Bridge,
+                    traditional crafts and historic sites.
+                </p>
+
+                <p>
+                    <strong>Duration:</strong>
+                    3 Days / 2 Nights
+                </p>
+
+                <p class="price">
+                    250,000 MMK
+                </p>
+
+                <a href="booking.html" class="book-button">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bago -->
+
+        <div class="tour">
+
+            <img src="images/bago.jpg" alt="Bago">
+
+            <div class="tour-content">
+
+                <h3>Bago Heritage Tour</h3>
+
+                <p>
+                    Visit historic pagodas, monasteries and
+                    cultural landmarks of ancient Bago.
+                </p>
+
+                <p>
+                    <strong>Duration:</strong>
+                    2 Days / 1 Night
+                </p>
+
+                <p class="price">
+                    120,000 MMK
+                </p>
+
+                <a href="booking.html" class="book-button">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Inle Lake -->
+
+        <div class="tour">
+
+            <img src="images/inle.jpg" alt="Inle Lake">
+
+            <div class="tour-content">
+
+                <h3>Inle Lake Culture Tour</h3>
+
+                <p>
+                    Experience floating villages, traditional
+                    fishing and the unique lifestyle of local people.
+                </p>
+
+                <p>
+                    <strong>Duration:</strong>
+                    3 Days / 2 Nights
+                </p>
+
+                <p class="price">
+                    280,000 MMK
+                </p>
+
+                <a href="booking.html" class="book-button">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
